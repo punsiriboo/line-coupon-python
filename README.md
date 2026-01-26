@@ -74,26 +74,7 @@ python 3_broadcast_coupon.py
 
 **หมายเหตุ:** แก้ไข `COUPON_ID` ในไฟล์ให้ตรงกับ coupon_id ที่ต้องการส่ง
 
-### 4. `4_close_coupon.py` - ปิดคูปอง
-ปิด/ลบคูปองออกจากระบบ
-
-**การใช้งาน:**
-```bash
-python 4_close_coupon.py
-```
-
-**ฟีเจอร์:**
-- ปิดคูปองที่ระบุ
-- ผู้ใช้จะไม่สามารถใช้คูปองนั้นได้อีก
-
-**เอกสารอ้างอิง:**
-- [LINE Messaging API - close_coupon](https://github.com/line/line-bot-sdk-python/blob/master/linebot/v3/messaging/docs/MessagingApi.md#close_coupon)
-
-**หมายเหตุ:** 
-- แก้ไข `COUPON_ID` ในไฟล์เพื่อปิดคูปองอื่น
-- ⚠️ **ระวัง:** การปิดคูปองจะลบคูปองออกจากระบบถาวร
-
-### 5. `4_push_coupon.py` - ส่งคูปองแบบ Push (ส่งหาคนเดียว)
+### 4. `4_push_coupon.py` - ส่งคูปองแบบ Push (ส่งหาคนเดียว)
 ส่งคูปองให้ผู้ใช้ 1 คน ผ่าน Push Message
 
 **การใช้งาน:**
@@ -106,6 +87,27 @@ python 4_push_coupon.py
 
 **เอกสารอ้างอิง:**
 - [LINE Messaging API - push_message](https://github.com/line/line-bot-sdk-python/blob/master/linebot/v3/messaging/docs/MessagingApi.md#push_message)
+
+**หมายเหตุ:** แก้ไข `USER_ID` และ `COUPON_ID` ในไฟล์ให้ตรงกับข้อมูลที่ต้องการส่ง
+
+### 5. `5_close_coupon.py` - ปิดคูปอง
+ปิด/ลบคูปองออกจากระบบ
+
+**การใช้งาน:**
+```bash
+python 5_close_coupon.py
+```
+
+**ฟีเจอร์:**
+- ปิดคูปองที่ระบุ
+- ผู้ใช้จะไม่สามารถใช้คูปองนั้นได้อีก
+
+**เอกสารอ้างอิง:**
+- [LINE Messaging API - close_coupon](https://github.com/line/line-bot-sdk-python/blob/master/linebot/v3/messaging/docs/MessagingApi.md#close_coupon)
+
+**หมายเหตุ:** 
+- แก้ไข `COUPON_ID` ในไฟล์เพื่อปิดคูปองอื่น
+- ⚠️ **ระวัง:** การปิดคูปองจะลบคูปองออกจากระบบถาวร
 
 ## หมายเหตุ
 
