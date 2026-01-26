@@ -93,6 +93,20 @@ python 4_close_coupon.py
 - แก้ไข `COUPON_ID` ในไฟล์เพื่อปิดคูปองอื่น
 - ⚠️ **ระวัง:** การปิดคูปองจะลบคูปองออกจากระบบถาวร
 
+### 5. `4_push_coupon.py` - ส่งคูปองแบบ Push (ส่งหาคนเดียว)
+ส่งคูปองให้ผู้ใช้ 1 คน ผ่าน Push Message
+
+**การใช้งาน:**
+```bash
+python 4_push_coupon.py
+```
+
+**ฟีเจอร์:**
+- ส่งคูปองให้ผู้ใช้คนเดียวด้วย `USER_ID` และ `COUPON_ID`
+
+**เอกสารอ้างอิง:**
+- [LINE Messaging API - push_message](https://github.com/line/line-bot-sdk-python/blob/master/linebot/v3/messaging/docs/MessagingApi.md#push_message)
+
 ## หมายเหตุ
 
 - ต้องมี `CHANNEL_ACCESS_TOKEN` ใน environment variable (BEARER_TOKEN = CHANNEL_ACCESS_TOKEN)
