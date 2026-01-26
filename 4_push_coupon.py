@@ -6,15 +6,10 @@ from linebot.v3.messaging.models.push_message_request import PushMessageRequest
 
 load_dotenv()
 
-CHANNEL_ACCESS_TOKEN = os.environ.get("CHANNEL_ACCESS_TOKEN")
-if not CHANNEL_ACCESS_TOKEN:
-    raise ValueError("CHANNEL_ACCESS_TOKEN environment variable is not set")
-
-# Configure Bearer authorization
-configuration = Configuration(access_token=CHANNEL_ACCESS_TOKEN)
-api_client = ApiClient(configuration)
+load_dotenv(override=True, dotenv_path=".env")
+configuration = Configuration(access_token=os.getenv("CHANNEL_ACCESS_TOKEN"))
+api_client = ApiClient(configuration) 
 messaging_api = MessagingApi(api_client)
-
 
 def push_coupon(user_id: str, coupon_id: str):
     if not user_id or not str(user_id).strip():

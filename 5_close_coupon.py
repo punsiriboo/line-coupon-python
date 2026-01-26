@@ -2,15 +2,9 @@ import os
 from dotenv import load_dotenv
 from linebot.v3.messaging import Configuration, ApiClient, MessagingApi
 
-load_dotenv()
-
-CHANNEL_ACCESS_TOKEN = os.environ.get("CHANNEL_ACCESS_TOKEN")
-if not CHANNEL_ACCESS_TOKEN:
-    raise ValueError("CHANNEL_ACCESS_TOKEN environment variable is not set")
-
-# Configure Bearer authorization
-configuration = Configuration(access_token=CHANNEL_ACCESS_TOKEN)
-api_client = ApiClient(configuration)
+load_dotenv(override=True, dotenv_path=".env")
+configuration = Configuration(access_token=os.getenv("CHANNEL_ACCESS_TOKEN"))
+api_client = ApiClient(configuration) 
 messaging_api = MessagingApi(api_client)
 
 def close_coupon(coupon_id: str):
