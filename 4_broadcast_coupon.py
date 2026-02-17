@@ -1,7 +1,3 @@
-"""
-LINE Coupon Broadcast Script
-ส่งคูปองให้ผู้ใช้ทั้งหมดผ่าน Broadcast Message
-"""
 import os
 from dotenv import load_dotenv
 from linebot.v3.messaging import Configuration, ApiClient, MessagingApi
@@ -14,10 +10,6 @@ api_client = ApiClient(configuration)
 messaging_api = MessagingApi(api_client)
 
 def broadcast_coupon(coupon_id: str):
-    
-    if not coupon_id or not str(coupon_id).strip():
-        raise ValueError("coupon_id is empty")
-
     try:
         messages = [CouponMessage(coupon_id=coupon_id)]
         broadcast_request = BroadcastRequest(messages=messages)
@@ -35,5 +27,5 @@ def broadcast_coupon(coupon_id: str):
 
 
 if __name__ == "__main__":
-    COUPON_ID = "01KFNS2Y3EB5S79S9Z86MQHGTH"
+    COUPON_ID = "01KHNEBPAP6NG6GA9TB94NEHS5"
     broadcast_coupon(COUPON_ID)

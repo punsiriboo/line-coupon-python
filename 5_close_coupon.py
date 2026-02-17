@@ -14,9 +14,9 @@ def close_coupon(coupon_id: str):
         print(api_response)
 
     except Exception as e:
-        print(f"Exception when calling MessagingApi->delete_coupon: {e}\n")
+        print(f"Exception when calling MessagingApi->close_coupon: {e}\n")
         raise
 
 if __name__ == "__main__":
-    COUPON_ID = "01KFNS2Y3EB5S79S9Z86MQHGTH"
+    COUPON_ID = "01KHNEBPAP6NG6GA9TB94NEHS5"
     close_coupon(COUPON_ID)

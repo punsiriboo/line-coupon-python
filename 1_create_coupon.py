@@ -11,7 +11,7 @@ messaging_api = MessagingApi(api_client)
 def create_coupon():    
     try:
         coupon_create_request = CouponCreateRequest(
-            title="Friends-only coupon - 2",
+            title="Friends-only coupon",
             description="- To use this coupon, please show this screen to the staff.\n- Used coupons cannot be used again. If you accidentally mark it as \"used\", it will also become unavailable.\n- This coupon may be changed or terminated without notice regardless of the validity period.",
             reward={
                 "type": "discount",
@@ -26,7 +26,7 @@ def create_coupon():
             startTimestamp=0,
             endTimestamp=1924959599,
             imageUrl="https://developers.line.biz/media/messaging-api/coupon/sample-coupon-image-100-yen-off.jpg",
-            timezone="ASIA_TOKYO",
+            timezone="ASIA_BANGKOK",
             visibility="UNLISTED",
             maxUseCountPerTicket=1,
         )    
