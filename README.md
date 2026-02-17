@@ -103,6 +103,10 @@ python 5_close_coupon.py
 - ปิดคูปองที่ระบุ
 - ผู้ใช้จะไม่สามารถใช้คูปองนั้นได้อีก
 
+**เอกสารอ้างอิง:**
+- [LINE Messaging API - close_coupon](https://github.com/line/line-bot-sdk-python/blob/master/linebot/v3/messaging/docs/MessagingApi.md#close_coupon)
+
+
 ### 6. `6_narrowcast_coupon.py` - ส่งคูปองแบบ Narrowcast (target เฉพาะผู้หญิง)
 ส่งคูปองให้เฉพาะกลุ่มเป้าหมายผู้หญิงผ่าน Narrowcast Message
 
@@ -116,15 +120,9 @@ python 6_narrowcast_coupon.py
 - ใช้ filter demographic ตามมาตรฐาน LINE Messaging API
 
 
-**เอกสารอ้างอิง:**
-- [LINE Messaging API - close_coupon](https://github.com/line/line-bot-sdk-python/blob/master/linebot/v3/messaging/docs/MessagingApi.md#close_coupon)
-
-**หมายเหตุ:** 
-- แก้ไข `COUPON_ID` ในไฟล์เพื่อปิดคูปองอื่น
-- ⚠️ **ระวัง:** การปิดคูปองจะลบคูปองออกจากระบบถาวร
 
 ## หมายเหตุ
-
+- แก้ไข `COUPON_ID` ในไฟล์เพื่อปิดคูปองอื่น
 - ต้องมี `CHANNEL_ACCESS_TOKEN` ใน environment variable (BEARER_TOKEN = CHANNEL_ACCESS_TOKEN)
 - ต้องกำหนดข้อมูลคูปองใน `CouponCreateRequest` object ก่อนเรียก API
 - ไฟล์ `.env` อยู่ใน `.gitignore` แล้ว เพื่อความปลอดภัย

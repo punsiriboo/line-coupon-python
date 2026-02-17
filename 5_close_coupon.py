@@ -9,14 +9,13 @@ messaging_api = MessagingApi(api_client)
 
 def close_coupon(coupon_id: str):
     try:
-        api_response = messaging_api.close_coupon(coupon_id=coupon_id)
-        print("The response of MessagingApi->delete_coupon:\n")
-        print(api_response)
+        messaging_api.close_coupon(coupon_id=coupon_id)
+        print(f"The response of MessagingApi->close_coupon: {coupon_id}\n")
 
     except Exception as e:
         print(f"Exception when calling MessagingApi->close_coupon: {e}\n")
         raise
 
 if __name__ == "__main__":
-    COUPON_ID = "01KHNEBPAP6NG6GA9TB94NEHS5"
+    COUPON_ID = "01KHNHV8N25BT8CAX8DC3EVBYN"
     close_coupon(COUPON_ID)
