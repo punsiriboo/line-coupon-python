@@ -12,14 +12,18 @@ pip install -r requirements.txt
 2. ตั้งค่า environment variable:
 
 **วิธีที่ 1: ใช้ไฟล์ .env (แนะนำ)**
+
 ```bash
 # สร้างไฟล์ .env
-echo "CHANNEL_ACCESS_TOKEN=your_channel_access_token_here" > .env
+echo "CHANNEL_ACCESS_TOKEN=xxx" > .env
+echo "LINE_USER_ID=xxx" >> .env
 ```
+
 
 **วิธีที่ 2: ตั้งค่า environment variable โดยตรง**
 ```bash
-export CHANNEL_ACCESS_TOKEN="your_channel_access_token_here"
+export CHANNEL_ACCESS_TOKEN="xxx"
+export LINE_USER_ID="xxx"
 ```
 
 
