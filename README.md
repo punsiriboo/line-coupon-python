@@ -22,6 +22,7 @@ echo "CHANNEL_ACCESS_TOKEN=your_channel_access_token_here" > .env
 export CHANNEL_ACCESS_TOKEN="your_channel_access_token_here"
 ```
 
+
 ## ไฟล์ในโปรเจกต์
 
 ### 1. `1_create_coupon.py` - สร้างคูปอง
@@ -101,6 +102,19 @@ python 5_close_coupon.py
 **ฟีเจอร์:**
 - ปิดคูปองที่ระบุ
 - ผู้ใช้จะไม่สามารถใช้คูปองนั้นได้อีก
+
+### 6. `6_narrowcast_coupon.py` - ส่งคูปองแบบ Narrowcast (target เฉพาะผู้หญิง)
+ส่งคูปองให้เฉพาะกลุ่มเป้าหมายผู้หญิงผ่าน Narrowcast Message
+
+**การใช้งาน:**
+```bash
+python 6_narrowcast_coupon.py
+```
+
+**ฟีเจอร์:**
+- ส่งคูปองให้เฉพาะผู้หญิงที่ติดตาม LINE Official Account (target gender = female)
+- ใช้ filter demographic ตามมาตรฐาน LINE Messaging API
+
 
 **เอกสารอ้างอิง:**
 - [LINE Messaging API - close_coupon](https://github.com/line/line-bot-sdk-python/blob/master/linebot/v3/messaging/docs/MessagingApi.md#close_coupon)
