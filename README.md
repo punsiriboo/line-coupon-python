@@ -118,7 +118,8 @@ python 6_narrowcast_coupon.py
 **ฟีเจอร์:**
 - ส่งคูปองให้เฉพาะผู้หญิงที่ติดตาม LINE Official Account (target gender = female)
 - ใช้ filter demographic ตามมาตรฐาน LINE Messaging API
-
+**เอกสารอ้างอิง:**
+- [LINE Messaging API - narrowcast](https://github.com/line/line-bot-sdk-python/blob/master/linebot/v3/messaging/docs/MessagingApi.md#narrowcast)
 
 
 ## หมายเหตุ
